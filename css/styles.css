@@ -1,0 +1,17 @@
+:root {
+  --primary-font: 'Roboto', sans-serif;
+  --logo-font: 'Railway', sans-serif;
+}
+
+body {
+  font-family: var(--primary-font);
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
