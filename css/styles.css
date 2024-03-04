@@ -1,10 +1,25 @@
 :root {
   --primary-font: 'Roboto', sans-serif;
   --logo-font: 'Railway', sans-serif;
+  --primary-background-color: #fff;
+  --headings-text-color: #2e2f42;
+  --body-text-color: #434455;
+  --light-text-font-color: #fff;
+  --accent-color: #4d5ae5;
+  --default-font-size: 16px;
+  --default-font-weight: 400;
+  --default-line-height: 1.5;
+  --default-letter-spacing: 0.02em;
 }
 
 body {
   font-family: var(--primary-font);
+  background-color: var(--primary-background-color);
+  color: var(--body-text-color);
+  font-size: var(--default-font-size);
+  font-weight: var(--default-font-weight);
+  line-height: var(--default-line-height);
+  letter-spacing: var(--default-letter-spacing);
 }
 
 ul,
@@ -14,4 +29,46 @@ ol {
 
 a {
   text-decoration: none;
+}
+
+a:visited {
+  color: var(--headings-font-color);
+}
+
+address {
+  font-style: normal;
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+}
+
+.accent {
+  color: var(--accent-color);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.navigation-studio-logo {
+  font-family: var(--logo-font);
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #4d5ae5;
 }
