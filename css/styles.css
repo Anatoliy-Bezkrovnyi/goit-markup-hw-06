@@ -1,7 +1,8 @@
 :root {
   --primary-font: 'Roboto', sans-serif;
-  --logo-font: 'Railway', sans-serif;
+  --logo-font: 'Raleway', sans-serif;
   --primary-background-color: #fff;
+  --additional-background-color: #2e2f42;
   --headings-text-color: #2e2f42;
   --body-text-color: #434455;
   --light-text-font-color: #fff;
@@ -71,6 +72,10 @@ address {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
+}
+
+.navigation-studio-logo.light {
+  color: var(--light-text-font-color);
 }
 
 .header-navigation-item {
@@ -151,4 +156,12 @@ address {
 .portfolio-filter-button:active {
   background-color: var(--cta-active-button-color);
   color: var(--light-text-font-color);
+}
+
+.hero {
+  background-color: var(--additional-background-color);
+}
+
+.footer {
+  background-color: var(--additional-background-color);
 }
