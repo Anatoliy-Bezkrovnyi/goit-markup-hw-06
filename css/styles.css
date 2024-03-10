@@ -28,9 +28,22 @@ body {
   letter-spacing: var(--default-letter-spacing);
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
 ul,
 ol {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -44,6 +57,10 @@ a:visited {
 
 address {
   font-style: normal;
+}
+
+img {
+  display: block;
 }
 
 .accent {
@@ -64,6 +81,17 @@ address {
   overflow: hidden;
 }
 
+.container {
+  width: 1158px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
 .navigation-studio-logo {
   font-family: var(--logo-font);
   font-size: 18px;
@@ -71,7 +99,27 @@ address {
   line-height: 1.2;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #4d5ae5;
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-navigation {
+  display: flex;
+  align-items: center;
+}
+
+.header-navigation-menu {
+  display: flex;
+  gap: 40px;
+}
+
+.header-address-list {
+  display: flex;
+  gap: 40px;
 }
 
 .navigation-studio-logo.light {
