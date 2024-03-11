@@ -232,6 +232,7 @@ img {
 }
 
 .team-member-card {
+  background-color: var(--primary-background-color);
   display: flex;
   flex-direction: column;
   border-radius: 0 0 4px 4px;
