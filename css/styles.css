@@ -10,6 +10,8 @@
   --focus-hover-active-color: #4d5ae5;
   --cta-button-color: #4d5ae5;
   --filter-button-text-color: #4d5ae5;
+  --social-button-color: #4d5ae5;
+  --social-button-hover-color: #31d0aa;
   --cta-active-button-color: #404bbf;
   --filter-button-background-color: #f4f4fd;
   --team-section-background-color: #f4f4fd;
@@ -20,6 +22,9 @@
   --items: 3;
   --indent: 24px;
   --portfolio-card-border-color: #e7e9fc;
+  --customer-icon-border-color: #8e8f99;
+  --customer-icon-color: #8e8f99;
+  --customer-link-active-color: #404bbf;
 }
 
 body {
@@ -94,6 +99,7 @@ img {
 .wrapper {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .card-set {
@@ -108,11 +114,16 @@ img {
 
 .features,
 .what-are-we-doing,
-.team {
+.team,
+.customers {
   padding-top: 120px;
 }
 
 .what-are-we-doing {
+  padding-bottom: 120px;
+}
+
+.customers {
   padding-bottom: 120px;
 }
 
@@ -224,6 +235,11 @@ img {
   color: var(--headings-text-color);
 }
 
+.item-header-icon {
+  padding: 24px 100px;
+  background-color: var(--team-section-background-color);
+}
+
 .feature-description {
   width: 264px;
   display: flex;
@@ -248,11 +264,33 @@ img {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding: 32px 16px;
+}
+
+.team-card-social-link {
+  display: block;
+  line-height: 1;
+  padding: 12px;
+  border-radius: 50%;
+  background-color: var(--social-button-color);
+}
+
+.team-card-social-link:hover,
+.team-card-social-link:focus,
+.team-card-social-link:active {
+  background-color: var(--social-button-hover-color);
+}
+
+.team-card-social-logo {
+  fill: var(--primary-background-color);
 }
 
 .footer-text {
+  color: var(--filter-button-background-color);
+}
+
+.footer-text-social {
+  font-weight: 500;
   color: var(--light-text-font-color);
 }
 
@@ -305,7 +343,17 @@ img {
 }
 
 .hero {
+  max-width: 1440px;
+  margin: 0 auto;
   background-color: var(--additional-background-color);
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/hero_section/people-office_hero.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .hero .container {
@@ -315,6 +363,28 @@ img {
   justify-content: center;
   gap: 48px;
   padding: 188px 0;
+}
+
+.customer-cards {
+  display: flex;
+}
+
+.customer-card-link {
+  display: block;
+  border: 1px solid var(--customer-icon-border-color);
+  border-radius: 4px;
+  padding: 16px 32px;
+}
+
+.customer-cards-item-logo {
+  fill: var(--customer-icon-color);
+}
+
+.customer-card-item:hover,
+.customer-card-item:focus,
+.customer-card-item:active {
+  border-color: var(--customer-link-active-color);
+  fill: var(--customer-link-active-color);
 }
 
 .footer {
@@ -328,4 +398,17 @@ img {
   gap: 16px;
   padding-top: 100px;
   padding-bottom: 100px;
+}
+
+.social-links-block {
+  width: 208px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-top: 100px;
+}
+
+.container.footer {
+  display: flex;
+  gap: 120px;
 }
