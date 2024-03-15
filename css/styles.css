@@ -415,6 +415,12 @@ img {
   fill: var(--primary-background-color);
 }
 
+.footer-social-link:hover,
+.footer-social-link:focus,
+.footer-social-link:active {
+  background-color: var(--social-button-hover-color);
+}
+
 .team-card-social-link {
   width: 40px;
   height: 40px;
