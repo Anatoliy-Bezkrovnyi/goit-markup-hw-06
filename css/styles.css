@@ -11,6 +11,7 @@
   --cta-button-color: #4d5ae5;
   --filter-button-text-color: #4d5ae5;
   --social-button-color: #4d5ae5;
+  --overlay-background-color: #4d5ae5;
   --social-button-hover-color: #31d0aa;
   --cta-active-button-color: #404bbf;
   --filter-button-background-color: #f4f4fd;
@@ -25,6 +26,9 @@
   --customer-icon-border-color: #8e8f99;
   --customer-icon-color: #8e8f99;
   --customer-link-active-color: #404bbf;
+  --modal-background: #fcfcfc;
+  --defaut-trasition-time: 250ms;
+  --default-transition-metod: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -110,6 +114,24 @@ img {
 
 .card-set-item {
   flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+  transition: var(--defaut-trasition-time) var(--default-transition-metod);
+  transition-property: box-shadow;
+}
+
+.card-set-item-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-set-item:hover,
+.card-set-item:focus {
+  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+}
+
+.card-set-item:hover .overlay,
+.card-set-item:focus .overlay {
+  transform: translateY(0);
 }
 
 .features,
@@ -175,6 +197,8 @@ img {
   display: block;
   font-weight: 500;
   padding: 24px 0;
+  transition: var(--defaut-trasition-time) var(--default-transition-metod);
+  transition-property: color;
 }
 
 .header-navigation-item:hover,
@@ -184,6 +208,8 @@ img {
 
 .header-address-item {
   color: #434455;
+  transition: var(--defaut-trasition-time) var(--default-transition-metod);
+  transition-property: color;
 }
 
 .header-address-item:hover,
@@ -235,7 +261,11 @@ img {
 }
 
 .item-header-icon {
-  padding: 24px 100px;
+  height: 112px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   background-color: var(--team-section-background-color);
 }
 
@@ -266,14 +296,30 @@ img {
   padding: 32px 16px;
 }
 
-.team-card-social-link:hover,
-.team-card-social-link:focus,
-.team-card-social-link:active {
+.social-link:hover,
+.social-link:focus,
+.social-link:active {
   background-color: var(--social-button-hover-color);
 }
 
-.team-card-social-logo {
+.social-logo-svg {
   fill: var(--primary-background-color);
+}
+
+.social-link {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: var(--social-button-color);
+  transition: var(--defaut-trasition-time) var(--default-transition-metod);
+  transition-property: background-color;
+}
+
+.social-link-logo {
+  display: flex;
 }
 
 .footer-text {
@@ -308,6 +354,8 @@ img {
   border: 1px solid var(--portfolio-card-border-color);
   border-radius: 4px;
   padding: 12px 24px;
+  transition: var(--defaut-trasition-time) var(--default-transition-metod);
+  transition-property: color background-color box-shadow;
 }
 
 .portfolio-filter-button:hover,
@@ -357,23 +405,33 @@ img {
 }
 
 .customer-card-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 168px;
   height: 88px;
-  display: block;
   border: 1px solid var(--customer-icon-border-color);
   border-radius: 4px;
-  padding: 16px 32px;
+  transition: var(--defaut-trasition-time) var(--default-transition-metod);
+  transition-property: border-color;
+}
+
+.customer-card-link:hover,
+.customer-card-link:focus,
+.customer-card-link:active {
+  border-color: var(--customer-link-active-color);
+}
+.customer-card-link:hover .customer-cards-item-logo,
+.customer-card-link:focus .customer-cards-item-logo,
+.customer-card-link:active .customer-cards-item-logo {
+  fill: var(--customer-link-active-color);
 }
 
 .customer-cards-item-logo {
+  display: flex;
   fill: var(--customer-icon-color);
-}
-
-.customer-card-item:hover,
-.customer-card-item:focus,
-.customer-card-item:active {
-  border-color: var(--customer-link-active-color);
-  fill: var(--customer-link-active-color);
+  transition: var(--defaut-trasition-time) var(--default-transition-metod);
+  transition-property: fill;
 }
 
 .footer {
@@ -402,46 +460,103 @@ img {
   gap: 120px;
 }
 
-.footer-social-link {
-  width: 40px;
-  height: 40px;
-  display: block;
-  padding: 8px;
-  border-radius: 50%;
-  background-color: var(--social-button-color);
-}
-
-.footer-social-logo {
-  fill: var(--primary-background-color);
-}
-
-.footer-social-link:hover,
-.footer-social-link:focus,
-.footer-social-link:active {
-  background-color: var(--social-button-hover-color);
-}
-
-.team-card-social-link {
-  width: 40px;
-  height: 40px;
-  display: block;
-  padding: 12px;
-  border-radius: 50%;
-  background-color: var(--social-button-color);
-}
-
 .header-navigation-item {
   position: relative;
 }
 
 .header-navigation-item::after {
-  color: var(--focus-hover-active-color);
   display: block;
-  position: relative;
-  top: 24px;
+  position: absolute;
+  top: 68px;
   content: '';
   border-radius: 2px;
   width: 100%;
   height: 4px;
-  background: #404bbf;
+  background: transparent;
+}
+
+.header-navigation-item.current::after {
+  background: var(--focus-hover-active-color);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--overlay-background-color);
+  transform: translateY(100%);
+  transition: var(--defaut-trasition-time) var(--default-transition-metod);
+  transition-property: transform;
+}
+
+.overlay-text {
+  color: var(--filter-button-background-color);
+  padding: 40px 32px 168px 32px;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(46, 47, 66, 0.4);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: opacity, visibility;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 408px;
+  width: 100%;
+  min-height: 584px;
+  background-color: var(--modal-background);
+  border-radius: 4px;
+  box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
+    0 1px 1px 0 rgba(0, 0, 0, 0.14);
+}
+.modal-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: var(--portfolio-card-border-color);
+  transition: var(--defaut-trasition-time) var(--default-transition-metod);
+  transition-property: border-color background-color;
+}
+.modal-btn-icon {
+  display: flex;
+  fill: var(--additional-background-color);
+  transition: var(--defaut-trasition-time) var(--default-transition-metod);
+  transition-property: fill;
+}
+
+.modal-btn:hover,
+.modal-btn:focus,
+.modal-btn:active {
+  border-color: var(--cta-active-button-color);
+  background-color: var(--cta-active-button-color);
+}
+
+.modal-btn:hover .modal-btn-icon,
+.modal-btn:focus .modal-btn-icon,
+.modal-btn:active .modal-btn-icon {
+  fill: var(--primary-background-color);
 }
