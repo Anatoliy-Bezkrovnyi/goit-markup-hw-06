@@ -299,6 +299,12 @@ img {
 .social-link:hover,
 .social-link:focus,
 .social-link:active {
+  background-color: var(--customer-link-active-color);
+}
+
+.social-link.footer-link:hover,
+.social-link.footer-link:focus,
+.social-link.footer-link:active {
   background-color: var(--social-button-hover-color);
 }
 
@@ -477,6 +483,10 @@ img {
 
 .header-navigation-item.current::after {
   background: var(--focus-hover-active-color);
+}
+
+.header-navigation-item.current {
+  color: var(--focus-hover-active-color);
 }
 
 .overlay {
