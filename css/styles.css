@@ -82,6 +82,10 @@ img {
   color: var(--accent-color);
 }
 
+.hide {
+  display: none;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -97,9 +101,24 @@ img {
 }
 
 .container {
-  width: 1158px;
+  min-width: 320px;
+  max-width: 375px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 16px;
+  
+}
+
+@media only screen and (min-width: 768px){
+  .container {
+    max-width: 736px;    
+  }
+}
+
+@media only screen and (min-width: 1158px){
+  .container {
+    max-width: 1158px;    
+    padding: 0 15px;
+  }
 }
 
 .wrapper {
@@ -107,6 +126,7 @@ img {
   justify-content: space-between;
   align-items: center;
 }
+
 
 .card-set {
   display: flex;
@@ -140,20 +160,48 @@ img {
 .what-are-we-doing,
 .team,
 .customers {
+  padding-top: 96px;
+}
+
+@media only screen and (min-width: 1158px){
+  .features,
+  .what-are-we-doing,
+  .team,
+  .customers {
   padding-top: 120px;
+}
 }
 
 .what-are-we-doing {
-  padding-bottom: 120px;
+  padding-bottom: 96px;
+} 
+
+@media only screen and (min-width: 1158px){
+  .what-are-we-doing {
+    padding-bottom: 120px;
+  } 
 }
 
+
 .customers {
-  padding-bottom: 120px;
+  padding-bottom: 96px;
+}
+
+@media only screen and (min-width: 1158px){
+  .customers {
+    padding-bottom: 120px;
+  } 
 }
 
 .team {
   background-color: var(--team-section-background-color);
-  padding: 120px 0;
+  padding: 96px 82px;
+}
+
+@media only screen and (min-width: 1158px){
+  .team {
+    padding: 120px 0;
+  }
 }
 
 .navigation-studio-logo {
@@ -221,12 +269,21 @@ img {
 }
 
 .hero-header {
-  width: 496px;
+  width: 320px;
   font-weight: 700;
-  font-size: 56px;
-  line-height: 1.1;
+  font-size: 36px;
+  line-height: 111%;
+  text-transform: capitalize;
   text-align: center;
   color: var(--light-text-font-color);
+}
+
+@media only screen and (min-width: 768px){
+  .hero-header {
+    width: 496px;
+    font-size: 56px;
+    line-height: 107%;
+  }    
 }
 
 .hero-button {
@@ -256,11 +313,33 @@ img {
 }
 
 .item-header {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 111%;  
+  text-transform: capitalize;
+  text-align: center;
   color: var(--headings-text-color);
 }
+
+@media only screen and (min-width: 768px){
+  .item-header {text-align: left;}
+}
+
+@media only screen and (min-width: 1158px){
+  .item-header {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    color: var(--headings-text-color);
+  }
+}
+
+@media only screen and (max-width: 768px){
+  .paragraph-text {
+    font-weight: 500;    
+  }
+}
+
 
 .item-header-icon {
   height: 112px;
