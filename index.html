@@ -69,7 +69,7 @@
       </div>
     </header>
     <main>
-      <section class="hero hide">
+      <section class="hero">
         <div class="container">
           <h1 class="hero-header">Effective Solutions for Your Business</h1>
           <button class="hero-button" type="button" data-modal-open>
@@ -80,7 +80,7 @@
       <section class="features">
         <div class="container">
           <h2 class="visually-hidden">Features</h2>
-          <ul class="wrapper">
+          <ul class="wrapper features-wrapper">
             <li class="feature-description">
               <div class="item-header-icon">
                 <svg class="customer-cards-item-logo" width="64" height="64">
@@ -166,7 +166,7 @@
       <section class="team">
         <div class="container">
           <h2 class="section-header">Our Team</h2>
-          <ul class="wrapper">
+          <ul class="wrapper team-wrapper">
             <li class="team-member-card">
               <img
                 class="team-member-image"
@@ -519,7 +519,7 @@
         </div>
         <div class="social-links-block">
           <p class="footer-text-social">Social media</p>
-          <ul class="wrapper">
+          <ul class="socials">
             <li class="social-link footer-link">
               <a
                 class="social-link-logo"
@@ -670,28 +670,93 @@
       </div>
     </div>
     <div class="menu-container js-menu-container" id="mobile-menu">
-      <button class="menu-toggle js-close-menu">
-        <svg
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-            clip-rule="evenodd"
-          ></path>
+      <button class="menu-toggle js-close-menu mobile-modal-btn-close">
+        <svg class="modal-btn-icon" width="8" height="8">
+          <use href="./images/svg/icons.svg#icon-close-black-18dp"></use>
         </svg>
       </button>
 
       <ul class="mobile-menu">
-        <li><a href="" class="link">About</a></li>
-        <li><a href="" class="link">Products</a></li>
-        <li><a href="" class="link">Contacts</a></li>
-        <li><a href="" class="link">Career</a></li>
+        <li>
+          <a class="mobile-menu-item current" href="./index.html" class="link"
+            >Studio</a
+          >
+        </li>
+        <li>
+          <a class="mobile-menu-item" href="./portfolio.html" class="link"
+            >Portfolio</a
+          >
+        </li>
+        <li><a class="mobile-menu-item" href="" class="link">Contacts</a></li>
       </ul>
+      <address class="mobile-menu-address">
+        <ul class="mobile-menu-address-list">
+          <li>
+            <a class="mobile-menu-address-item-phone" href="tel:+110001111111"
+              >+11 (000) 111-11-11</a
+            >
+          </li>
+          <li>
+            <a
+              class="mobile-menu-address-item-email"
+              href="mailto:info@devstudio.com"
+              >info@devstudio.com</a
+            >
+          </li>
+        </ul>
+      </address>
+      <div class="mobile-menu-social-links-block">
+        <ul class="mobile-menu-social-links">
+          <li class="mobile-menu-social-link">
+            <a
+              class="social-link-logo"
+              href="https://www.instagram.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg class="social-logo-svg" width="24" height="24">
+                <use href="./images/svg/icons.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="mobile-menu-social-link">
+            <a
+              class="social-link-logo"
+              href="https://www.twitter.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg class="social-logo-svg" width="24" height="24">
+                <use href="./images/svg/icons.svg#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="mobile-menu-social-link">
+            <a
+              class="social-link-logo"
+              href="https://www.facebook.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg class="social-logo-svg" width="24" height="24">
+                <use href="./images/svg/icons.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="mobile-menu-social-link">
+            <a
+              class="social-link-logo"
+              href="https://www.linkedin.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg class="social-logo-svg" width="24" height="24">
+                <use href="./images/svg/icons.svg#icon-linkedin"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
     <script src="./js/modal.js"></script>
     <script
