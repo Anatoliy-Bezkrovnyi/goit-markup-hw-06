@@ -69,7 +69,7 @@
       </div>
     </header>
     <main>
-      <section class="hero">
+      <section class="hero hero-wrapper">
         <div class="container">
           <h1 class="hero-header">Effective Solutions for Your Business</h1>
           <button class="hero-button" type="button" data-modal-open>
@@ -137,28 +137,115 @@
           <h2 class="section-header">What are we doing</h2>
           <ul class="wrapper">
             <li>
-              <img
-                src="./images/what_are_we_doing/dashboard.jpeg"
-                alt="Dashboard"
-                width="360"
-                height="300"
-              />
+              <picture>
+                <!-- Desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/what_are_we_doing/dashboard_1x.jpeg 1x,
+                    1x,
+                    ./images/what_are_we_doing/dashboard.jpeg    2x
+                  "
+                />
+                <!-- Tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/what_are_we_doing/dashboard_1x.jpeg 1x,
+                    1x,
+                    ./images/what_are_we_doing/dashboard.jpeg    2x
+                  "
+                />
+                <!-- Mobile screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/what_are_we_doing/dashboard_1x.jpeg 1x,
+                    1x,
+                    ./images/what_are_we_doing/dashboard.jpeg    2x
+                  "
+                />
+                <img
+                  src="./images/what_are_we_doing/dashboard.jpeg"
+                  alt="Dashboard"
+                  width="360"
+                  height="300"
+                />
+              </picture>
             </li>
             <li>
-              <img
-                src="./images/what_are_we_doing/mobile.jpeg"
-                alt="Mobile"
-                width="360"
-                height="300"
-              />
+              <picture>
+                <!-- Desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/what_are_we_doing/mobile_1x.jpeg 1x,
+                    1x,
+                    ./images/what_are_we_doing/mobile.jpeg    2x
+                  "
+                />
+                <!-- Tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/what_are_we_doing/mobile_1x.jpeg 1x,
+                    1x,
+                    ./images/what_are_we_doing/mobile.jpeg    2x
+                  "
+                />
+                <!-- Mobile screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/what_are_we_doing/mobile_1x.jpeg 1x,
+                    1x,
+                    ./images/what_are_we_doing/mobile.jpeg    2x
+                  "
+                />
+                <img
+                  src="./images/what_are_we_doing/mobile.jpeg"
+                  alt="Dashboard"
+                  width="360"
+                  height="300"
+                />
+              </picture>
             </li>
             <li>
-              <img
-                src="./images/what_are_we_doing/web.jpeg"
-                alt="Web"
-                width="360"
-                height="300"
-              />
+              <picture>
+                <!-- Desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/what_are_we_doing/web_1x.jpeg 1x,
+                    1x,
+                    ./images/what_are_we_doing/web.jpeg    2x
+                  "
+                />
+                <!-- Tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/what_are_we_doing/web_1x.jpeg 1x,
+                    1x,
+                    ./images/what_are_we_doing/web.jpeg    2x
+                  "
+                />
+                <!-- Mobile screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/what_are_we_doing/web_1x.jpeg 1x,
+                    1x,
+                    ./images/what_are_we_doing/web.jpeg    2x
+                  "
+                />
+                <img
+                  src="./images/what_are_we_doing/web.jpeg"
+                  alt="Dashboard"
+                  width="360"
+                  height="300"
+                />
+              </picture>
             </li>
           </ul>
         </div>
@@ -168,13 +255,38 @@
           <h2 class="section-header">Our Team</h2>
           <ul class="wrapper team-wrapper">
             <li class="team-member-card">
-              <img
-                class="team-member-image"
-                src="./images/our_team/mark_guerrero.jpeg"
-                alt="Product Designer"
-                width="264"
-                height="260"
-              />
+              <picture>
+                <!-- Desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/our_team/mark_guerrero_1x.jpeg 1x,
+                    ./images/our_team/mark_guerrero.jpeg    2x
+                  "
+                />
+                <!-- Tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/our_team/mark_guerrero_1x.jpeg 1x,
+                    ./images/our_team/mark_guerrero.jpeg    2x
+                  "
+                />
+                <!-- Mobile screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/our_team/mark_guerrero_1x.jpeg 1x,
+                    ./images/our_team/mark_guerrero.jpeg    2x
+                  "
+                />
+                <img
+                  src="./images/our_team/mark_guerrero_1x.jpeg"
+                  alt="Dashboard"
+                  width="360"
+                  height="300"
+                />
+              </picture>
               <div class="team-member-card-description">
                 <h3 class="item-header card">Mark Guerrero</h3>
                 <p class="paragraph-text card">Product Designer</p>
@@ -231,13 +343,38 @@
               </div>
             </li>
             <li class="team-member-card">
-              <img
-                class="team-member-image"
-                src="./images/our_team/tom_ford.jpeg"
-                alt="Frontend Developer"
-                width="264"
-                height="260"
-              />
+              <picture>
+                <!-- Desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/our_team/tom_ford_1x.jpeg 1x,
+                    ./images/our_team/tom_ford.jpeg    2x
+                  "
+                />
+                <!-- Tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/our_team/tom_ford_1x.jpeg 1x,
+                    ./images/our_team/tom_ford.jpeg    2x
+                  "
+                />
+                <!-- Mobile screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/our_team/tom_ford_1x.jpeg 1x,
+                    ./images/our_team/tom_ford.jpeg    2x
+                  "
+                />
+                <img
+                  src="./images/our_team/tom_ford_1x.jpeg"
+                  alt="Dashboard"
+                  width="360"
+                  height="300"
+                />
+              </picture>
               <div class="team-member-card-description">
                 <h3 class="item-header card">Tom Ford</h3>
                 <p class="paragraph-text card">Frontend Developer</p>
@@ -294,13 +431,38 @@
               </div>
             </li>
             <li class="team-member-card">
-              <img
-                class="team-member-image"
-                src="./images/our_team/camila_garcia.jpeg"
-                alt="Marketing"
-                width="264"
-                height="260"
-              />
+              <picture>
+                <!-- Desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/our_team/camila_garcia_1x.jpeg 1x,
+                    ./images/our_team/camila_garcia.jpeg    2x
+                  "
+                />
+                <!-- Tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/our_team/camila_garcia_1x.jpeg 1x,
+                    ./images/our_team/camila_garcia.jpeg    2x
+                  "
+                />
+                <!-- Mobile screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/our_team/camila_garcia_1x.jpeg 1x,
+                    ./images/our_team/camila_garcia.jpeg    2x
+                  "
+                />
+                <img
+                  src="./images/our_team/camila_garcia_1x.jpeg"
+                  alt="Dashboard"
+                  width="360"
+                  height="300"
+                />
+              </picture>
               <div class="team-member-card-description">
                 <h3 class="item-header card">Camila Garcia</h3>
                 <p class="paragraph-text card">Marketing</p>
@@ -357,13 +519,38 @@
               </div>
             </li>
             <li class="team-member-card">
-              <img
-                class="team-member-image"
-                src="./images/our_team/daniel_wilson.jpeg"
-                alt="UI Designer"
-                width="264"
-                height="260"
-              />
+              <picture>
+                <!-- Desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/our_team/daniel_wilson_1x.jpeg 1x,
+                    ./images/our_team/daniel_wilson.jpeg    2x
+                  "
+                />
+                <!-- Tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/our_team/daniel_wilson_1x.jpeg 1x,
+                    ./images/our_team/daniel_wilson.jpeg    2x
+                  "
+                />
+                <!-- Mobile screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/our_team/daniel_wilson_1x.jpeg 1x,
+                    ./images/our_team/daniel_wilson.jpeg    2x
+                  "
+                />
+                <img
+                  src="./images/our_team/daniel_wilson_1x.jpeg"
+                  alt="Dashboard"
+                  width="360"
+                  height="300"
+                />
+              </picture>
               <div class="team-member-card-description">
                 <h3 class="item-header card">Daniel Wilson</h3>
                 <p class="paragraph-text card">UI Designer</p>
